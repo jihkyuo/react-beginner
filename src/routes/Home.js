@@ -9,7 +9,7 @@ function Home() {
   const getMovies = async () => {
     const json = await (
       await fetch(
-        "https://yts.mx/api/v2/list_movies.json?minimum_rating=9&sort_by=year"
+        "https://yts.mx/api/v2/list_movies.json?minimum_rating=3&sort_by=year"
       )
     ).json();
     setMovies(json.data.movies);
@@ -19,7 +19,7 @@ function Home() {
   useEffect(() => {
     getMovies();
   }, []);
-  console.log(movies);
+  // console.log(movies[0].genres);
 
   return (
     <div className={styled.homeBody}>
@@ -27,14 +27,14 @@ function Home() {
         <h1>Loading...</h1>
       ) : (
         <div className={styled.grid}>
-          {movies.map((movie) => (
+          {movies.map((movie, idx) => (
             <Movie
               key={movie.id}
               id={movie.id}
               coverImg={movie.medium_cover_image}
               title={movie.title}
               summary={movie.summary}
-              genres={movie.genres}
+              genres={movie.genres ? movie.genres : []}
             />
           ))}
         </div>

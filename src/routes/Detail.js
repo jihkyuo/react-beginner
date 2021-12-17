@@ -6,14 +6,14 @@ import Movie from "../components/Movie";
 function Detail() {
   const [loading, setLoading] = useState(true);
   const [movie, setMovie] = useState([]);
-  const { tomato } = useParams();
+  const { id } = useParams();
   const getMovie = useCallback(async () => {
     const json = await (
-      await fetch(`https://yts.mx/api/v2/movie_details.json?movie_id=${tomato}`)
+      await fetch(`https://yts.mx/api/v2/movie_details.json?movie_id=${id}`)
     ).json();
     setMovie([json.data.movie]);
     setLoading(false);
-  }, [tomato]);
+  }, [id]);
 
   useEffect(() => {
     getMovie();

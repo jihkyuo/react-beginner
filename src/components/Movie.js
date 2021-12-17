@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import styled from "../css/Movie.module.css";
 
 function Movie({ id, coverImg, title, summary, genres }) {
+  console.log(coverImg);
   return (
     <section className={styled.movies}>
       <div>
@@ -11,11 +12,10 @@ function Movie({ id, coverImg, title, summary, genres }) {
           <Link to={`/movie/${id}`}>{title}</Link>
         </h2>
         <p>{summary}</p>
-        <ul>
-          {genres.map((g) => (
-            <li key={g}>{g}</li>
-          ))}
-        </ul>
+
+        {genres.map((g) => (
+          <li key={g}>{g}</li>
+        ))}
       </div>
     </section>
   );
