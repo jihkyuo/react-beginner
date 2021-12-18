@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import Movie from "../components/Movie";
 import styled from "../css/Home.module.css";
+import { Link } from "react-router-dom";
 
 function Home() {
   const [loading, setLoading] = useState(true);
@@ -27,6 +28,9 @@ function Home() {
         <h1>Loading...</h1>
       ) : (
         <div className={styled.grid}>
+          <h1>
+            <Link to={`/movie/genre=romance`}>로맨스물</Link>
+          </h1>
           {movies.map((movie, idx) => (
             <Movie
               key={movie.id}
@@ -34,7 +38,7 @@ function Home() {
               coverImg={movie.medium_cover_image}
               title={movie.title}
               summary={movie.summary}
-              genres={movie.genres ? movie.genres : []}
+              genres={movie.genres}
             />
           ))}
         </div>
