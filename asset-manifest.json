@@ -1,17 +1,20 @@
 {
   "files": {
-    "main.js": "/react-beginner/static/js/main.768f7987.chunk.js",
-    "main.js.map": "/react-beginner/static/js/main.768f7987.chunk.js.map",
+    "main.css": "/react-beginner/static/css/main.4477748c.chunk.css",
+    "main.js": "/react-beginner/static/js/main.265e5812.chunk.js",
+    "main.js.map": "/react-beginner/static/js/main.265e5812.chunk.js.map",
     "runtime-main.js": "/react-beginner/static/js/runtime-main.ccdb38bb.js",
     "runtime-main.js.map": "/react-beginner/static/js/runtime-main.ccdb38bb.js.map",
-    "static/js/2.ae3d97d0.chunk.js": "/react-beginner/static/js/2.ae3d97d0.chunk.js",
-    "static/js/2.ae3d97d0.chunk.js.map": "/react-beginner/static/js/2.ae3d97d0.chunk.js.map",
+    "static/js/2.6f6f5c80.chunk.js": "/react-beginner/static/js/2.6f6f5c80.chunk.js",
+    "static/js/2.6f6f5c80.chunk.js.map": "/react-beginner/static/js/2.6f6f5c80.chunk.js.map",
     "index.html": "/react-beginner/index.html",
-    "static/js/2.ae3d97d0.chunk.js.LICENSE.txt": "/react-beginner/static/js/2.ae3d97d0.chunk.js.LICENSE.txt"
+    "static/css/main.4477748c.chunk.css.map": "/react-beginner/static/css/main.4477748c.chunk.css.map",
+    "static/js/2.6f6f5c80.chunk.js.LICENSE.txt": "/react-beginner/static/js/2.6f6f5c80.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.ccdb38bb.js",
-    "static/js/2.ae3d97d0.chunk.js",
-    "static/js/main.768f7987.chunk.js"
+    "static/js/2.6f6f5c80.chunk.js",
+    "static/css/main.4477748c.chunk.css",
+    "static/js/main.265e5812.chunk.js"
   ]
 }
