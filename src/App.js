@@ -1,21 +1,22 @@
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Detail from "./routes/Detail";
 import Home from "./routes/Home";
-import Romance from "./routes/Romance";
+import Genre from "./routes/Genre";
 
 // config css
 import "./css/reset.css";
+// 전역 css
 import "./css/styles.css";
 
 function App() {
   return (
     <Router>
       <Switch>
-        <Route path="/movie/genre=romance">
-          <Romance />
-        </Route>
-        <Route path="/movie/:id">
+        <Route path="/movie/:id(\d+)">
           <Detail />
+        </Route>
+        <Route path="/movie/:params/:urlPage">
+          <Genre />
         </Route>
         <Route path="/">
           <Home />

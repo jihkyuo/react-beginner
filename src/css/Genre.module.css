@@ -16,22 +16,12 @@
   grid-auto-rows: 25vw;
 }
 
-/* 헤더 작업 */
-.header {
-  box-sizing: border-box;
-  color: black;
-  position: fixed;
-  padding: 20px 40px;
-  width: 100%;
-  top: 0;
-  left: 0;
+.pages {
+  margin: 50px;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  justify-content: center;
 }
-.headerColumn {
-  display: flex;
-}
-.headerColumn__item {
-  margin: 2px;
+.pages a {
+  margin: 20px;
+  font-size: 2em;
 }

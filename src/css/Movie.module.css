@@ -1,4 +1,36 @@
 .movies {
   background-color: tomato;
-  color: white;
+  color: black;
+  display: flex;
+  font-family: "Yanone Kaffeesatz", sans-serif;
+  border-radius: 10px;
+}
+.movieImgs {
+  position: relative;
+  flex: 1;
+  background-color: ivory;
+  border-radius: 10px 0 0 10px;
+}
+.movieImg {
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+}
+
+.movieColumn {
+  width: 60%;
+  padding: 2em 1em;
+}
+.movieColumn__title {
+  font-size: 2.5em;
+}
+.movieColumn__year {
+  margin-top: 0.5em;
+  font-size: 1.2em;
+}
+.movieColumn__summary {
+  margin-top: 1em;
+  font-size: 1.5em;
 }
