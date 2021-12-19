@@ -1,7 +1,6 @@
 import { useCallback, useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import Header from "../components/Header";
-import Movie from "../components/Movie";
 import styled from "../css/Detail.module.css";
 
 function Detail() {
@@ -19,7 +18,7 @@ function Detail() {
   useEffect(() => {
     getMovie();
   }, [getMovie]);
-  console.log(movie[0]);
+
   return (
     <div>
       {loading ? (
@@ -28,11 +27,16 @@ function Detail() {
         <div>
           <Header />
           <main>
-            <img className={styled.detailImg} src={movie[0].background_image} />
+            <img
+              className={styled.detailImg}
+              src={movie[0].background_image}
+              alt={movie[0].title}
+            />
             <section className={styled.detailMovie}>
               <img
                 src={movie[0].medium_cover_image}
                 className={styled.detailMovie__img}
+                alt={movie[0].title}
               />
               <div className={styled.detailMovie__column}>
                 <div className={styled.detailMovie__title}>
