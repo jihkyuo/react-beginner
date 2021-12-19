@@ -28,7 +28,7 @@ function Home() {
       ) : (
         <div>
           <Header />
-          <main>
+          <main className={styled.homeMain}>
             <div className={styled.grid}>
               {movies.map((movie, idx) => (
                 <Movie
@@ -39,6 +39,7 @@ function Home() {
                   year={movie.year}
                   summary={movie.summary}
                   genres={movie.genres}
+                  home={"home"}
                 />
               ))}
             </div>

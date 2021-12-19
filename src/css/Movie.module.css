@@ -1,15 +1,22 @@
 .movies {
-  background-color: tomato;
+  background-color: rgba(255, 255, 255, 0.7);
   color: black;
   display: flex;
   font-family: "Yanone Kaffeesatz", sans-serif;
-  border-radius: 10px;
+  border-radius: 1em;
+  box-shadow: 0 13px 27px -5px rgb(50 50 93 / 25%),
+    0 8px 16px -8px rgb(0 0 0 / 30%), 0 -6px 16px -6px rgb(0 0 0 / 3%);
+  transition: box-shadow 0.4s ease-in-out, transform 0.4s ease-in-out,
+    background-color 0.4s ease-in-out;
+}
+.movies:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 19px 38px rgb(0 0 0 / 30%), 0 15px 12px rgb(0 0 0 / 22%);
+  background-color: rgba(255, 255, 255, 1);
 }
 .movieImgs {
   position: relative;
   flex: 1;
-  background-color: ivory;
-  border-radius: 10px 0 0 10px;
 }
 .movieImg {
   position: absolute;
@@ -33,4 +40,19 @@
 .movieColumn__summary {
   margin-top: 1em;
   font-size: 1.5em;
+}
+
+.genre {
+  margin-top: 1em;
+  display: flex;
+  width: 90%;
+  flex-wrap: wrap;
+  color: rgba(255, 255, 255, 0.7);
+}
+.genre__icon {
+  margin: 0 0.5em 0.7em 0;
+  background-color: #845ec2;
+  padding: 0.3em;
+  border-radius: 0.5em;
+  text-align: center;
 }
