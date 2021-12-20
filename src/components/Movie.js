@@ -9,8 +9,12 @@ function Movie({ id, coverImg, title, genres, summary, year, home }) {
         <img src={coverImg} alt={title} className={styled.movieImg} />
       </div>
 
-      <div className={styled.movieColumn}>
-        <h2 className={styled.movieColumn__title}>
+      <div className={home ? styled.homeMoviesColumn : styled.movieColumn}>
+        <h2
+          className={
+            home ? styled.homeMoviesColumn__title : styled.movieColumn__title
+          }
+        >
           <Link to={`/movie/${id}`}>{title}</Link>
         </h2>
         <h3 className={styled.movieColumn__year}>{year}</h3>
