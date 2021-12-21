@@ -46,42 +46,44 @@ function Home() {
         <div>
           <Header />
           <main className={styled.homeMain}>
-            <header className={styled.homeHeader}>
-              <Link to={`/movie/minimum_rating=8/1`}>Hight Rating</Link>
-            </header>
-            <div
-              className={styled.grid}
-              style={{ transform: `translateX(${-78 * slide}em)` }}
-            >
-              {movies.map((movie, idx) => (
-                <Movie
-                  key={movie.id}
-                  id={movie.id}
-                  coverImg={movie.medium_cover_image}
-                  title={movie.title}
-                  year={movie.year}
-                  summary={movie.summary}
-                  genres={movie.genres}
-                  home={"home"}
-                />
-              ))}
-            </div>
-            <div className={styled.slideBtn}>
-              <div>
-                <FontAwesomeIcon
-                  icon={faChevronLeft}
-                  className={styled.slideBtn__left}
-                  onClick={onClickLeft}
-                  id="left"
-                />
+            <div className={styled.homeMain__blur}>
+              <header className={styled.homeHeader}>
+                <Link to={`/movie/minimum_rating=8/1`}>Hight Rating</Link>
+              </header>
+              <div
+                className={styled.grid}
+                style={{ transform: `translateX(${-78 * slide}em)` }}
+              >
+                {movies.map((movie, idx) => (
+                  <Movie
+                    key={movie.id}
+                    id={movie.id}
+                    coverImg={movie.medium_cover_image}
+                    title={movie.title}
+                    year={movie.year}
+                    summary={movie.summary}
+                    genres={movie.genres}
+                    home={"home"}
+                  />
+                ))}
               </div>
-              <div>
-                <FontAwesomeIcon
-                  icon={faChevronRight}
-                  className={styled.slideBtn__right}
-                  onClick={onClickRight}
-                  id="right"
-                />
+              <div className={styled.slideBtn}>
+                <div>
+                  <FontAwesomeIcon
+                    icon={faChevronLeft}
+                    className={styled.slideBtn__left}
+                    onClick={onClickLeft}
+                    id="left"
+                  />
+                </div>
+                <div>
+                  <FontAwesomeIcon
+                    icon={faChevronRight}
+                    className={styled.slideBtn__right}
+                    onClick={onClickRight}
+                    id="right"
+                  />
+                </div>
               </div>
             </div>
           </main>
