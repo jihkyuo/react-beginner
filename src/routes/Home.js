@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import Movie from "../components/Movie";
 import Header from "../components/Header";
+import Swiperjs from "../components/Swiper";
+
 import styled from "../css/Home.module.css";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -46,14 +48,31 @@ function Home() {
         <div>
           <Header />
           <main className={styled.homeMain}>
-            <div className={styled.homeMain__blur}>
-              <header className={styled.homeHeader}>
-                <Link to={`/movie/minimum_rating=8/1`}>Hight Rating</Link>
-              </header>
-              <div
+            <header className={styled.homeHeader}>
+              <Link to={`/movie/minimum_rating=8/1`}>Hight Rating</Link>
+            </header>
+            {/* <div
                 className={styled.grid}
                 style={{ transform: `translateX(${-78 * slide}em)` }}
               >
+                <div className={styled.slideBtn}>
+                  <div>
+                    <FontAwesomeIcon
+                      icon={faChevronLeft}
+                      className={styled.slideBtn__left}
+                      onClick={onClickLeft}
+                      id="left"
+                    />
+                  </div>
+                  <div>
+                    <FontAwesomeIcon
+                      icon={faChevronRight}
+                      className={styled.slideBtn__right}
+                      onClick={onClickRight}
+                      id="right"
+                    />
+                  </div>
+                </div>
                 {movies.map((movie, idx) => (
                   <Movie
                     key={movie.id}
@@ -66,27 +85,9 @@ function Home() {
                     home={"home"}
                   />
                 ))}
-              </div>
-              <div className={styled.slideBtn}>
-                <div>
-                  <FontAwesomeIcon
-                    icon={faChevronLeft}
-                    className={styled.slideBtn__left}
-                    onClick={onClickLeft}
-                    id="left"
-                  />
-                </div>
-                <div>
-                  <FontAwesomeIcon
-                    icon={faChevronRight}
-                    className={styled.slideBtn__right}
-                    onClick={onClickRight}
-                    id="right"
-                  />
-                </div>
-              </div>
-            </div>
+              </div> */}
           </main>
+          <Swiperjs movies={movies} />
         </div>
       )}
     </div>

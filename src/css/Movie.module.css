@@ -8,7 +8,6 @@
     0 8px 16px -8px rgb(0 0 0 / 30%), 0 -6px 16px -6px rgb(0 0 0 / 3%);
   transition: box-shadow 0.4s ease-in-out, transform 0.4s ease-in-out,
     background-color 0.4s ease-in-out;
-  z-index: 50;
 }
 .movies:hover {
   transform: translateY(-10px);
@@ -34,6 +33,7 @@
 .homeMoviesColumn {
   /* Home */
   width: 40%;
+  height: 18em;
   padding: 1em;
 }
 
