@@ -1,39 +1,35 @@
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
-import SwiperCore, {
-  Pagination,
-  Navigation,
-  Autoplay,
-  EffectCoverflow,
-} from "swiper";
+import SwiperCore, { Pagination, Navigation, Autoplay } from "swiper";
 
 // Import Swiper styles
 import "swiper/swiper.min.css";
 import "swiper/components/pagination/pagination.min.css";
 import "swiper/components/navigation/navigation.min.css";
+// import "swiper/components/effect-coverflow/effect-coverflow.min.css";
 
 import styled from "../css/Swiper.module.css";
 
 import Movie from "./Movie";
 
 function Swiperjs({ movies }) {
-  SwiperCore.use([Pagination, Navigation, Autoplay, EffectCoverflow]);
+  SwiperCore.use([Pagination, Navigation, Autoplay]);
   return (
     <Swiper
       className={styled.swiper__wrapper}
       spaceBetween={20}
       slidesPerView={3}
       grabCursor={true}
-      centeredSlides={true}
-      effect={"coverflow"}
-      autoplay={{ delay: 1000 }}
+      // centeredSlides={true}
+      // effect={"coverflow"}
+      autoplay={{ delay: 2000 }}
       navigation
       loop={true}
       pagination={{
         dynamicBullets: true,
       }}
-      onSlideChange={() => console.log("slide change")}
-      onSwiper={(swiper) => console.log(swiper)}
+      // onSlideChange={() => console.log("slide change")}
+      // onSwiper={(swiper) => console.log(swiper)}
     >
       {movies.map((movie, idx) => (
         <SwiperSlide key={movie.id}>
