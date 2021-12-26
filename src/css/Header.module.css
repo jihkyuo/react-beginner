@@ -4,7 +4,7 @@
   color: rgba(255, 255, 255, 0.7);
   box-sizing: border-box;
   position: fixed;
-  padding: 0.5em 2em;
+  padding: 1em 5em;
   width: 100%;
   top: 0;
   left: 0;
@@ -22,6 +22,14 @@
 }
 .headerColumn {
   display: flex;
+  flex: 1;
+}
+.headerColumn:nth-child(2) {
+  justify-content: center;
+  flex: 2;
+}
+.headerColumn:nth-child(3) {
+  justify-content: flex-end;
 }
 .headerColumn a:hover {
   color: rgba(255, 255, 255, 1);
@@ -34,4 +42,29 @@
   background-color: #845ec2;
   box-shadow: rgb(50 50 93 / 25%) 0px 13px 27px -5px,
     rgb(0 0 0 / 30%) 0px 8px 16px -8px;
+}
+.headerColumn:first-child a {
+  display: flex;
+  align-items: center;
+  font-size: 2.2em;
+  font-family: fantasy;
+}
+
+@keyframes disc {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.homeIcon {
+  font-size: 1.2em;
+  margin-right: 0.1em;
+  transition: all ease-in-out 0.2s;
+}
+.headerColumn:first-child a:hover .homeIcon {
+  animation: disc 2s ease-in-out infinite forwards;
+  color: black;
+  /* animation-fill-mode: ; */
 }

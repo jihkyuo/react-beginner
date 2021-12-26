@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
 import Header from "../components/Header";
 import Swiperjs from "../components/Swiper";
+import Loading from "../components/Loading";
 
 import styled from "../css/Home.module.css";
 
@@ -28,18 +28,14 @@ function Home() {
   useEffect(() => {
     getMovies();
   }, []);
-  console.log(movies);
   return (
     <div className={styled.homeBody}>
       {loading ? (
-        <h1>Loading...</h1>
+        <Loading />
       ) : (
         <div>
           <Header />
           <main className={styled.homeMain}>
-            <header className={styled.homeHeader}>
-              <Link to={`/movie/minimum_rating=8/1`}>Hight Rating</Link>
-            </header>
             <Swiperjs movies={movies} />
           </main>
         </div>

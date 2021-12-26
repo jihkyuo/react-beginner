@@ -1,6 +1,11 @@
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
-import SwiperCore, { Pagination, Navigation, Autoplay } from "swiper";
+import SwiperCore, {
+  Pagination,
+  Navigation,
+  Autoplay,
+  // EffectCoverflow,
+} from "swiper";
 
 // Import Swiper styles
 import "swiper/swiper.min.css";
@@ -42,7 +47,7 @@ function Swiperjs({ movies }) {
             summary={movie.summary}
             genres={movie.genres}
             home={"home"}
-          />{" "}
+          />
         </SwiperSlide>
       ))}
     </Swiper>

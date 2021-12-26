@@ -2,6 +2,9 @@ import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import styled from "../css/Header.module.css";
 
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCompactDisc } from "@fortawesome/free-solid-svg-icons";
+
 function Header() {
   const [scroll, setScroll] = useState(false);
 
@@ -25,7 +28,10 @@ function Header() {
         }`}
       >
         <div className={styled.headerColumn}>
-          <Link to="/">HOME</Link>
+          <Link to="/">
+            <FontAwesomeIcon icon={faCompactDisc} className={styled.homeIcon} />
+            <span>ne FLIX</span>
+          </Link>
         </div>
         <div className={styled.headerColumn}>
           <div className={styled.headerColumn__item}>
@@ -35,10 +41,10 @@ function Header() {
             <Link to={`/movie/genre=romance/1`}>Romance</Link>
           </div>
           <div className={styled.headerColumn__item}>
-            <Link to={`/movie/genre=drama/1`}>Thriller</Link>
+            <Link to={`/movie/genre=drama/1`}>Drama</Link>
           </div>
           <div className={styled.headerColumn__item}>
-            <Link to={`/movie/genre=comedy/1`}>Animation</Link>
+            <Link to={`/movie/genre=comedy/1`}>Comedy</Link>
           </div>
         </div>
         <div className={styled.headerColumn}>아이콘</div>

@@ -4,6 +4,7 @@ import Header from "../components/Header";
 import List from "../components/List";
 import { useParams } from "react-router-dom";
 import styled from "../css/Genre.module.css";
+import Loading from "../components/Loading";
 
 function Genre() {
   const [loading, setLoading] = useState(true);
@@ -12,7 +13,13 @@ function Genre() {
   const listNums = [...Array(10)].map((_, idx) => idx + 1);
 
   let { params, urlPage } = useParams();
-
+  const headerTitle = (params) => {
+    if (params.includes("minimum")) {
+      return "High Rating";
+    } else if (params.includes("genre=")) {
+      return params.slice(6).toUpperCase();
+    }
+  };
   const getMovie = useCallback(async () => {
     setLoading(true);
     const json = await (
@@ -31,12 +38,15 @@ function Genre() {
   return (
     <div className={styled.homeBody}>
       {loading ? (
-        <h1>Loading...</h1>
+        <Loading />
       ) : (
         <div>
           <Header />
 
-          <main>
+          <main className={styled.movieMain}>
+            <header className={styled.movieMain__header}>
+              {headerTitle(params)}
+            </header>
             <div className={styled.grid}>
               {movies.map((movie, idx) => {
                 return (
@@ -55,7 +65,14 @@ function Genre() {
           </main>
           <div className={styled.pages}>
             {listNums.map((ele) => {
-              return <List key={ele} listNum={ele} params={params} />;
+              return (
+                <List
+                  key={ele}
+                  listNum={ele}
+                  params={params}
+                  urlPage={urlPage}
+                />
+              );
             })}
           </div>
         </div>
