@@ -1,6 +1,7 @@
 import { useCallback, useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import Header from "../components/Header";
+import Loading from "../components/Loading";
 import styled from "../css/Detail.module.css";
 
 function Detail() {
@@ -22,7 +23,7 @@ function Detail() {
   return (
     <div>
       {loading ? (
-        <h1>Loading...</h1>
+        <Loading />
       ) : (
         <div>
           <Header />

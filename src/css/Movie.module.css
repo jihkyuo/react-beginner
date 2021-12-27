@@ -44,6 +44,7 @@
 }
 .movieColumn__title:hover {
   color: #0b32e0;
+  text-decoration: underline;
 }
 .homeMoviesColumn__title {
   /* Home */
@@ -51,6 +52,7 @@
 }
 .homeMoviesColumn__title:hover {
   color: #0b32e0;
+  text-decoration: underline;
 }
 
 .movieColumn__year {

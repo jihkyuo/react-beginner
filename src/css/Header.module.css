@@ -66,5 +66,8 @@
 .headerColumn:first-child a:hover .homeIcon {
   animation: disc 2s ease-in-out infinite forwards;
   color: black;
-  /* animation-fill-mode: ; */
+}
+.headerIcon {
+  font-size: 1.6em;
+  margin-left: 0.4em;
 }

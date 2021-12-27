@@ -4,6 +4,7 @@ import styled from "../css/Header.module.css";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCompactDisc } from "@fortawesome/free-solid-svg-icons";
+import { faInstagram, faTwitter } from "@fortawesome/free-brands-svg-icons";
 
 function Header() {
   const [scroll, setScroll] = useState(false);
@@ -30,6 +31,7 @@ function Header() {
         <div className={styled.headerColumn}>
           <Link to="/">
             <FontAwesomeIcon icon={faCompactDisc} className={styled.homeIcon} />
+
             <span>ne FLIX</span>
           </Link>
         </div>
@@ -47,7 +49,18 @@ function Header() {
             <Link to={`/movie/genre=comedy/1`}>Comedy</Link>
           </div>
         </div>
-        <div className={styled.headerColumn}>아이콘</div>
+        <div className={styled.headerColumn}>
+          <a href="https://www.instagram.com/" target="_blank" rel="noreferrer">
+            <FontAwesomeIcon icon={faInstagram} className={styled.headerIcon} />
+          </a>
+          <a
+            href="https://twitter.com/?lang=ko"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <FontAwesomeIcon icon={faTwitter} className={styled.headerIcon} />
+          </a>
+        </div>
       </header>
     </div>
   );

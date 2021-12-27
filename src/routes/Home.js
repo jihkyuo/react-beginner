@@ -5,12 +5,6 @@ import Loading from "../components/Loading";
 
 import styled from "../css/Home.module.css";
 
-// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-// import {
-//   faChevronLeft,
-//   faChevronRight,
-// } from "@fortawesome/free-solid-svg-icons";
-
 function Home() {
   const [loading, setLoading] = useState(true);
   const [movies, setMovies] = useState([]);
